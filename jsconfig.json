@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@craco/app-one/*": ["apps/app-one/*"],
+      "@craco/btns/*": ["packages/btns/*"],
+      "@craco/core/*": ["packages/core/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

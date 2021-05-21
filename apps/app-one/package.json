@@ -1,0 +1,16 @@
+{
+  "name": "@craco/app-one",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/btns": "^0.1.0",
+    "@craco/core": "^0.1.0"
+  },
+  "scripts": {
+    "start": "craco start --verbose",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
+  },
+  "cracoConfig": "../../craco.config.js"
+}
