@@ -1,5 +1,6 @@
 const path = require('path');
-const { getLoader, loaderByName } = require('@craco/craco');
+const { getLoader, loaderByName, ESLINT_MODES } = require('@craco/craco');
+const { getPlugin, pluginByName } = require('@craco/craco/lib/webpack-plugins');
 
 const packages = ['btns', 'core'];
 const absolutePaths = [];
@@ -17,7 +18,16 @@ module.exports = {
         console.log('Loading sources from:', match.loader.include);
       }
 
+      const { match: eslintPlugin } = getPlugin(webpackConfig, pluginByName('ESLintWebpackPlugin'));
+      eslintPlugin.options['context'] = __dirname;
+      eslintPlugin.options['files'] = ['apps', 'packages'];
+
       return webpackConfig;
     },
+  },
+
+  eslint: {
+    enable: true,
+    mode: ESLINT_MODES.extends,
   },
 };
