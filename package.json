@@ -26,7 +26,7 @@
   "scripts": {
     "start": "lerna exec --scope @craco/app-one -- yarn start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
