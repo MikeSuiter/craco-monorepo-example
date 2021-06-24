@@ -21,19 +21,16 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "lerna": "^4.0.0"
   },
   "scripts": {
     "start": "lerna exec --scope @craco/app-one -- yarn start",
     "build": "craco build",
     "lint": "lerna run --parallel lint",
+    "format": "lerna run --parallel format",
     "test": "jest"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

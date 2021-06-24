@@ -11,6 +11,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "format": "prettier --write \"./src/**/*.{js,jsx,json,css}\"",
     "lint": "eslint \"./src/**/*.js\" --color"
   },
   "eslintConfig": {
