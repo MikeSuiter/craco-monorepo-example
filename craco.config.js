@@ -30,4 +30,10 @@ module.exports = {
     enable: true,
     mode: ESLINT_MODES.extends,
   },
+
+  jest: {
+    configure: {
+      setupFilesAfterEnv: ['../../config/jest/setupTests.js'],
+    },
+  },
 };
