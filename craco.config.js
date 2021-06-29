@@ -2,10 +2,14 @@ const path = require('path');
 const { getLoader, loaderByName, ESLINT_MODES } = require('@craco/craco');
 const { getPlugin, pluginByName } = require('@craco/craco/lib/webpack-plugins');
 
-const packages = ['btns', 'core'];
+const apps = ['app-one'];
+const packages = ['btns', 'core', 'stories'];
 const absolutePaths = [];
 packages.forEach((item) => {
   absolutePaths.push(path.join(__dirname, `packages/${item}/src`));
+});
+apps.forEach((item) => {
+  absolutePaths.push(path.join(__dirname, `apps/${item}/src`));
 });
 
 module.exports = {

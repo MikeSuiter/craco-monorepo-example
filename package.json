@@ -21,16 +21,25 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.3.0",
+    "@storybook/addon-essentials": "^6.3.0",
+    "@storybook/addon-links": "^6.3.0",
+    "@storybook/node-logger": "^6.3.0",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "storybook-preset-craco": "^0.0.4"
   },
   "scripts": {
     "start": "lerna exec --scope @craco/app-one -- yarn start",
     "build": "craco build",
     "lint": "lerna run --parallel lint",
     "format": "lerna run --parallel format",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "lerna exec --scope @craco/stories -- yarn storybook",
+    "build-storybook": "lerna exec --scope @craco/stories -- build-storybook"
   },
   "browserslist": {
     "production": [
@@ -42,6 +51,18 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   }
 }
