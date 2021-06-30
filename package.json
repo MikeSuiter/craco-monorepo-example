@@ -29,8 +29,8 @@
     "babel-loader": "8.1.0"
   },
   "scripts": {
-    "start": "lerna exec --scope @craco/app-one -- yarn start",
-    "build": "craco build",
+    "start:app-one": "lerna exec --scope @craco/app-one -- yarn start",
+    "build": "lerna run --parallel build",
     "lint": "lerna run --parallel lint",
     "format": "lerna run --parallel format",
     "test": "jest",

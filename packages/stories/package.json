@@ -14,9 +14,6 @@
     "storybook-preset-craco": "^0.0.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
